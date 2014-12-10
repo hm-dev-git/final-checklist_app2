@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 
    belongs_to :campaign
-   has_many :tasks, through: => :tally
+   has_many :tasks, :through => :tallies
    has_many :tallies
 
    validates :first_name, :last_name, presence: true
